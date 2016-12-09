@@ -1,0 +1,65 @@
+/* HERO SECTION (upfront image, banner) */
+
+.hero {
+    height: 300px;
+    width: 100%;
+    background-image: url('../img/luigis-logo.gif');
+    /* background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hero-header {
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    padding-top: 10%;
+    /* -webkit-saf: (browser specific for safari) */
+}
+
+/* END HERO SECTION */
+
+.luigi {
+    text-align: center;
+    font-family: "nadianne";
+    font-size: 12pt; color: #335752}
+
+h4 {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 11pt;
+    color: #335752
+    display: block;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+/* Gets rid of underline on 'Return Home' */
+a {
+    text-decoration: none;
+}
+
+#about-paragraph {
+    padding: 0 29px;
+    text-align: justify;
+}
+
+/* For Font Family Style */
+p.sansserif {
+    font-family: verdana, helvetica, sans-serif;
+}
+
+<!--
+body {
+    font-family: arial, helvetica, sans-serif;
+    color: #335752;
+    background-repeat: repeat
+}
+    a:link    { color: #335752 }
+    a:visited { color: #335752 }
+    a:hover   { color: #8bbaba /* #5c9999 */ }
+    a:active  { color: #54928b }
+-->

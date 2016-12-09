@@ -1,0 +1,211 @@
+/* UNIVERSALS */
+
+/* CSS: #nav-links, #hero-header, #main-paragraph, #social-media, #copyright, #about-paragraph, etc.
+   go to places in HTML code with same links such as: <ul id="nav-links">, <p id="about-paragraph"> */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gets rid of underline */
+a {
+    text-decoration: none;
+}
+
+/* always put a space between declarations */
+a:hover, a:visited { /* make 2 separate declarations to make "hover" and "visited" different colors */
+    color: #272822; /* this makes "hover" and "visited" #272822 color */
+}
+
+/* HEADER STYLES (BEGIN MENU BAR) */
+
+header {
+    position: fixed; /* Keeps menu bar in view fixed at top of screen as you scroll down */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    list-style-type: none; /* for text links and no bullets */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8bbaba; /* for menu bar background color */
+}
+
+li {
+    float: left;
+    border-right:1px solid #44746d; /* for thin border line (1px) */
+}
+
+li:last-child {
+    border-left:1px solid #44746d; /* border-right: none; (for no thin border on "About") */
+}
+
+#nav-links li a {
+    display: block; /* for menu bar block height */
+    color: #335752; /* for all text color */
+    text-align: center;
+    font-family: "verdana";
+    padding: 14px 16px; /* for menu bar height, for menu item width */
+    text-decoration: none; /* for no underline on text */
+}
+
+#nav-links li a:hover:not(.active) {
+    background-color: #cce0e0; /* for mouse over */
+}
+
+.active {
+    background-color: #cce0e0; /* for "Home" background color */
+}
+
+/* END MENU BAR */
+
+/* HERO SECTION (upfront image, banner) */
+
+.hero {
+    height: 300px;
+    width: 100%;
+    background-image: url('../img/luigis-restaurant-logo.gif');
+    /* background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.painting {
+    height: 700px;
+    width: 549px;
+    background: #8bbaba;
+    padding:10px;
+    border:1px solid #335752;
+    background-image: url('../img/luigis_painting.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hero-header {
+    text-align: center;
+    color: #fff;
+    font-size: 75px;
+    padding-top: 10%;
+    /* -webkit-saf: (browser specific for safari) */
+}
+
+/* MAIN CONTENT */
+
+main {
+    position: relative;
+    /*width: 70%;*/
+    float: center;
+}
+
+#main-paragraph {
+    padding: 0 29px;
+    text-align: justify;
+    font-family: "verdana";
+    /*text-align: center;
+    padding: 0 49px;
+    text-align: justify;*/
+}
+
+#main-header {
+    text-align: center;
+    font-family: "verdana";
+    font-size: 20pt;
+}
+
+h2 {
+    text-align: center;
+    font-size: 14pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+/* FOR BORDERS ON LUIGI'S PAINTING */
+
+/* framed image with a color background */
+.imgframe
+    { background: #8bbaba;
+    padding:10px;
+    border:1px solid #335752;
+}
+
+/* framed image with a transparent background */
+.img-frame {
+    background:transparent;
+    padding:8px;
+    border:1px solid #999999;
+}
+
+/* START TEXT FADE */
+h3 {
+    font-size: 24px;
+    animation: change 4s infinite;
+}
+
+@keyframes change {
+    from { color: #3d0000 }
+    to   { color: #ff4747 }
+}
+
+.home-steak-sand {
+    text-align: center;
+    font-family: "arial"; 
+    font-size: 14pt; color: #335752
+}
+/* END TEXT FADE */
+
+/* FOR MOUSEOVER */
+.luigi-menu {
+ display: block;
+ margin-bottom: 10px;
+ background-position: left top; /*center top*/
+ background-repeat: no-repeat;
+ width: 150px;
+ height: 150px;
+ background-image: url('../img/luigis_menu_off.gif');
+}
+
+.luigi-menu:hover {
+ background-image: url('../img/luigis_menu_on.gif');
+}
+
+/* FOOTER SECTION */
+
+footer {
+    background-color: #3c6761;
+    color: #d6ebe7;
+    height: 130px;
+    width: 100%;
+    position: relative;
+    /* top: ; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    clear: both; /* clear floats after elements */
+}
+
+.fa {
+    font-size: 42px;
+    padding: 0 12px;
+}
+
+footer a, footer a:hover, footer a:visited, footer a:link, footer a:active {
+    color: #d6ebe7;
+}
+
+#social-media {
+    text-align: center;
+    padding-top: 24px;
+}
+
+#copyright {
+    text-align: center;
+    font-family: "verdana";
+    padding-top: 40px;
+}
