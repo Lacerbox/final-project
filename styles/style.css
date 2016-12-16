@@ -1,8 +1,5 @@
 /* UNIVERSALS */
 
-/* CSS: #nav-links, #hero-header, #main-paragraph, #social-media, #copyright, #about-paragraph, etc.
-   go to places in HTML code with same links such as: <ul id="nav-links">, <p id="about-paragraph"> */
-
 html, body {
     height: 100%;
     width: 100%;
@@ -21,8 +18,7 @@ a:hover, a:visited { /* make 2 separate declarations to make "hover" and "visite
     color: #272822; /* this makes "hover" and "visited" #272822 color */
 }
 
-/* HEADER STYLES (BEGIN MENU BAR) */
-
+/* HEADER STYLES (MENU BAR BEGIN) */
 header {
     position: fixed; /* Keeps menu bar in view fixed at top of screen as you scroll down */
     top: 0;
@@ -63,11 +59,10 @@ li:last-child {
 .active {
     background-color: #cce0e0; /* for "Home" background color */
 }
-
-/* END MENU BAR */
+/* MENU BAR END */
 
 /* HERO SECTION (upfront image, banner) */
-
+/* (not using because "<h4><img src="img/luigis-restaurant-logo.gif" border=0 usemap="#luigi"></h4><map name="luigi">" works better */
 .hero {
     height: 300px;
     width: 100%;
@@ -78,12 +73,12 @@ li:last-child {
 }
 
 .painting {
-    height: 700px;
-    width: 549px;
+    height: 638px;
+    width: 400px;
     background: #8bbaba;
     padding:10px;
     border:1px solid #335752;
-    background-image: url('../img/luigis_painting.jpg');
+    background-image: url('../img/luigis-painting-signature.jpg');
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -93,11 +88,9 @@ li:last-child {
     color: #fff;
     font-size: 75px;
     padding-top: 10%;
-    /* -webkit-saf: (browser specific for safari) */
 }
 
 /* MAIN CONTENT */
-
 main {
     position: relative;
     /*width: 70%;*/
@@ -108,43 +101,105 @@ main {
     padding: 0 29px;
     text-align: justify;
     font-family: "verdana";
-    /*text-align: center;
-    padding: 0 49px;
-    text-align: justify;*/
 }
 
 #main-header {
     text-align: center;
     font-family: "verdana";
-    font-size: 20pt;
+    font-size: 19pt;
 }
 
-h2 {
-    text-align: center;
-    font-size: 14pt;
+/* MENU SECTION BEGIN */
+.column {
+    float: left;
+    width: 32.5%;
+    padding: 0 5px;
+    text-align: justify;
+    /*overflow: scroll;*/
+    min-height: 450px;
     font-family: "verdana";
     color: #335752
 }
 
-/* FOR BORDERS ON LUIGI'S PAINTING */
+.column-1 {
+    text-align: left;
+}
 
+.column-2 {
+    padding: 0 0 0 0px;
+}
+
+.column-3 {
+    text-align: right;
+}
+
+h2 {
+    text-align: center;
+    font-size: 13pt;
+    font-family: "verdana";
+    color: #335752
+}
+
+.button {
+    /* background-color: #; */
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:Verdana;
+    font-size: 12px;
+    margin: 4px 2px;
+    transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #8bbaba; 
+    color: #000000; 
+}
+
+.button1:hover {
+    background-color: #335752;
+    color: #ffffff;
+}
+
+h4 {
+    margin-top: 82px; /* for main logo height in index */
+    margin-bottom: 27px;
+    padding: 0 0 0 0px;
+}
+
+h5 {
+    margin-top: 100px; /* for left menu side height in index */
+    padding: 0 0 0 70px;
+}
+
+h6 {
+    margin-top: 100px; /* for right menu side height in index */
+    padding: 0 0 0 0px;
+}
+/* MENU SECTION END */
+
+/* FOR BORDERS ON LUIGI'S PAINTING */
 /* framed image with a color background */
 .imgframe
     { background: #8bbaba;
-    padding:10px;
-    border:1px solid #335752;
+    padding: 10px;
+    border: 1px solid #335752;
 }
 
 /* framed image with a transparent background */
 .img-frame {
     background:transparent;
-    padding:8px;
-    border:1px solid #999999;
+    padding: 8px;
+    border: 1px solid #999999;
 }
 
 /* START TEXT FADE */
 h3 {
-    font-size: 24px;
+    font-size: 19px;
     animation: change 4s infinite;
 }
 
@@ -162,21 +217,24 @@ h3 {
 
 /* FOR MOUSEOVER */
 .luigi-menu {
- display: block;
- margin-bottom: 10px;
- background-position: left top; /*center top*/
- background-repeat: no-repeat;
- width: 150px;
- height: 150px;
- background-image: url('../img/luigis_menu_off.gif');
+    display: block;
+    margin-bottom: 10px;
+    background-position: left top; /*center top*/
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    background-image: url('../img/luigis_menu_off.gif');
+    position: absolute;
+    top: 1050px; /* pushes menu-lady down and works on windows xp and windows 10 */
+    /*bottom: -325px; /* pushes menu-lady down (up?) but same number differs in height on windows xp and 10 */
+    left: 110px; /* pushes menu-lady 90 pixels from the left */
 }
 
 .luigi-menu:hover {
- background-image: url('../img/luigis_menu_on.gif');
+    background-image: url('../img/luigis_menu_on.gif');
 }
 
 /* FOOTER SECTION */
-
 footer {
     background-color: #3c6761;
     color: #d6ebe7;
@@ -195,9 +253,15 @@ footer {
     padding: 0 12px;
 }
 
-footer a, footer a:hover, footer a:visited, footer a:link, footer a:active {
-    color: #d6ebe7;
+footer a {
+    font-family: arial, helvetica, sans-serif;
+    color: #ffffff;
+    background-repeat: repeat
 }
+    footer a:link    { color: #ffffff }
+    footer a:visited { color: #ffffff }
+    footer a:hover   { color: #8bbaba }
+    footer a:active  { color: #ffffff }
 
 #social-media {
     text-align: center;

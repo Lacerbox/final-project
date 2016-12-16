@@ -1,10 +1,11 @@
-/* HERO SECTION (upfront image, banner) */
+/* HEADER STYLES FOR ABOUT.HTML */
 
+/* HERO SECTION (upfront image, banner) */
+/* (not using because "<div align="center"><h4><h5><img src="img/luigis-logo.gif"></h5></h4>" works better */
 .hero {
     height: 300px;
     width: 100%;
     background-image: url('../img/luigis-logo.gif');
-    /* background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -14,7 +15,6 @@
     color: #fff;
     font-size: 75px;
     padding-top: 10%;
-    /* -webkit-saf: (browser specific for safari) */
 }
 
 /* END HERO SECTION */
@@ -42,6 +42,12 @@ a {
     text-decoration: none;
 }
 
+h5 {
+    margin-top: 82px; /* for main logo height in index */
+    margin-bottom: 27px;
+    padding: 0 0 0 0px;
+}
+
 #about-paragraph {
     padding: 0 29px;
     text-align: justify;
@@ -60,6 +66,6 @@ body {
 }
     a:link    { color: #335752 }
     a:visited { color: #335752 }
-    a:hover   { color: #8bbaba /* #5c9999 */ }
+    a:hover   { color: #8bbaba }
     a:active  { color: #54928b }
 -->

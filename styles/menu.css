@@ -1,11 +1,12 @@
-/* HEADER STYLES */
+/* HEADER STYLES FOR MENU.HTML */
 
+/* HERO SECTION (using) */
 .hero {
     height: 400px;
     width: 100%;
     background-image: url('../img/pizza.jpg');
-/*    background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
-    background-size: cover; /*contain; /*950px 55%; /*width, height*/ /*cover;*/
+    /* background-size: 950px 55%; */ /* COMMENT: width, height, cover; */
+    background-size: cover; /*contain; /*950px 55%;*/ /*width, height*/ /*cover;*/
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -39,7 +40,6 @@ h2 {
     font-family:Verdana;
     font-size: 12px;
     margin: 4px 2px;
-    /*-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.2s; /* for 0.2 second transition on color change of button */
     cursor: pointer;
 }
@@ -53,36 +53,3 @@ h2 {
     background-color: #335752;
     color: #ffffff;
 }
-
-
-/* Original buttons from class (didn't work with link)
-UPDATE: I had an extra </a> and herf instead of href.
-When I took out the the extra </a> and it still didn't work,
-the instructor looked at my code and said "What's a herf".
-
-button {
-    padding: 2%;
-    border: none;
-    border-radius: 2.5px;
-}
-
-button a {
-    color: #fff;
-    font: 18px;
-}
-
-button:active {
-    outline: none; /* WON'T WORK ON CLOUD9
-}
-
-.column-1 button {
-    background-color: #9ad6bb;
-}
-
-.column-2 button {
-    background-color: #9ad6bb;
-}
-
-.column-3 button {
-    background-color: #9ad6bb;
-} */
