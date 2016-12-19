@@ -230,9 +230,19 @@ h3 {
     left: 110px; /* pushes menu-lady 90 pixels from the left */
 }
 
+/* FIXES IMAGE HOVER FIRST TIME BLINKING */
 .luigi-menu:hover {
-    background-image: url('../img/luigis_menu_on.gif');
+    background: url('../img/luigis_menu_on.gif') no-repeat;
 }
+.luigi-menu:after {
+    content: url('../img/luigis_menu_on.gif');
+    display: none;
+}
+
+/* CAUSES IMAGE HOVER FIRST TIME BLINKING */
+/*.luigi-menu:hover {
+    background-image: url('../img/luigis_menu_on.gif');
+}*/
 
 /* FOOTER SECTION */
 footer {
